@@ -18,16 +18,16 @@ def send_pan(pan):
     sp.write(tx_dat.encode())
     print(tx_dat)
 
-# 틸트 움직임을 시리얼 통신으로 보내는 함수
+- 틸트 움직임을 시리얼 통신으로 보내는 함수
 def send_tilt(tilt):
     tx_dat = "tilt" + str(tilt) + "\n"
     sp.write(tx_dat.encode())
     print(tx_dat)
 
 2. 오픈 머신러닝 가중치 파일 haarcascade.xml을 활용한, 얼굴 인식 기능 구현
-# 가중치 파일
+- 가중치 파일
 cascade_filename = 'haarcascade_frontalface_alt.xml'
-# 모델 불러오기
+- 모델 불러오기
 cascade = cv2.CascadeClassifier(cascade_filename)
 
 3. python & open cv2를 통해, Object Detection And Tracking Camera 구현.
